@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.pc</groupId>
-	<artifactId>microservices</artifactId>
+	<artifactId>os-mobile-util-ws</artifactId>
 	<version>1.0</version>
 
 	<name>microservices</name>
@@ -73,7 +73,9 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+<!--
+	ASH:: NO NEED TO HAVE PLUGIN FOR OPENSHIFT
+ 	<build>
 		<finalName>microservices</finalName>
 		<plugins>
 			<plugin>
@@ -82,4 +84,4 @@
 			</plugin>
 		</plugins>
 	</build>
-</project>
+ --></project>
