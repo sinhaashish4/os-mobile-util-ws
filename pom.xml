@@ -74,46 +74,46 @@
 	</dependencies>
 
 	<build>
-	
 
-    <plugins>
-        <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-        </configuration>
-     </plugin>
-        <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <configuration>
-             <mainClass>com.pc.Application</mainClass>
-        </configuration>
-        </plugin>
-    </plugins>
-   </build>
-   
-<!-- 		<plugins>
+
+		<plugins>
+
 			<plugin>
+				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<!-- <version>3.0.2</version> -->
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass></mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.pc.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
 			</plugin>
-
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.pc.Application</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
- -->
+
+	<!-- <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
+		<configuration> <archive> <manifest> <mainClass></mainClass> </manifest> 
+		</archive> </configuration> </plugin> <plugin> <groupId>org.springframework.boot</groupId> 
+		<artifactId>spring-boot-maven-plugin</artifactId> </plugin> </plugins> </build> -->
 
 
 	<!-- ASH:: NO NEED TO HAVE PLUGIN FOR OPENSHIFT <build> <finalName>microservices</finalName> 
