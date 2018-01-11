@@ -73,15 +73,25 @@
 		</dependency>
 	</dependencies>
 
-<!--
-	ASH:: NO NEED TO HAVE PLUGIN FOR OPENSHIFT
- 	<build>
-		<finalName>microservices</finalName>
+	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.pc.Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
- --></project>
+
+
+
+	<!-- ASH:: NO NEED TO HAVE PLUGIN FOR OPENSHIFT <build> <finalName>microservices</finalName> 
+		<plugins> <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+		</plugin> </plugins> </build> -->
+</project>
