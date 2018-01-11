@@ -74,21 +74,46 @@
 	</dependencies>
 
 	<build>
-		<plugins>
+	
+
+    <plugins>
+        <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+        </configuration>
+     </plugin>
+        <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <configuration>
+             <mainClass>com.pc.Application</mainClass>
+        </configuration>
+        </plugin>
+    </plugins>
+   </build>
+   
+<!-- 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.pc.Application</mainClass>
+							<mainClass></mainClass>
 						</manifest>
 					</archive>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
-
+ -->
 
 
 	<!-- ASH:: NO NEED TO HAVE PLUGIN FOR OPENSHIFT <build> <finalName>microservices</finalName> 
